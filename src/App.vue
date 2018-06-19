@@ -11,7 +11,10 @@
           v-for="(item, i) in getAllTabs"
           :key="i"
         >
-          <v-list-tile-content @click="_changeTab(item)">
+          <v-list-tile-content
+            @click="_changeTab(item)"
+            :class="item.isCurrent ? 'red--text': false "
+            >
             <v-list-tile-title v-text="item.name"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
